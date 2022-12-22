@@ -1,0 +1,13 @@
+{
+    "RCON-BOT_HELP": "【RCON BOT 帮助】\n !!RCON help - 查看帮助\n !!RCON myPerm - 查看您的权限\n",
+    "CURR_PERM_TEMPLATE": "您当前拥有的权限为：",
+    "NOT_PERMITTED_COMMAND":"您当前无此命令的执行权限！",
+    "COMMAND_SENT":"命令已执行",
+    "MIRAI_AUTHED":"Mirai机器人已认证，sessionKey为${bot.sessionKey}",
+    "MIRAI_VERIFIED":"Mirai机器人已校验，sessionKey为${bot.sessionKey}",
+    "MIRAI_FRIEND_LIST":"账号${bot.qq}中共有${friendList.length}位好友",
+    "MIRAI_DISCONNECTING":"Mirai机器人已断开",
+    "MCSERVER_AUTH":"MC远控已认证",
+    "MCSERVER_DISCONNECTING":"MC远控已断开",
+    "MCSERVER_RES_SENDER_NOT_FOUND":"MC远控：指令响应目标未找到，响应为：\n"
+}

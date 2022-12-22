@@ -1,0 +1,25 @@
+{
+  "name": "minecraft-rcon-mirai",
+  "version": "1.0.0",
+  "description": "Allow OP to use QQ remotely control Minecraft servers.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --recursive",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "RCON",
+    "Minecraft",
+    "Mirai"
+  ],
+  "author": "Clement_Levi",
+  "license": "AGPL-3.0-or-later",
+  "dependencies": {
+    "node-mirai-sdk": "^0.3.6",
+    "rcon": "^1.1.0",
+    "yaml": "^2.1.3"
+  },
+  "devDependencies": {
+    "mocha": "^10.2.0"
+  }
+}

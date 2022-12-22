@@ -1,0 +1,12 @@
+# Basic config items
+lang: zh-cn
+
+# Minecraft config items
+Minecraft-Server-Host: localhost
+rcon-port: 25569
+rcon-verification: # password
+
+# Mirai robot config items
+MiraiPath: D:/Runtime/Mirai
+QQ: 1919810
+PW: 114514

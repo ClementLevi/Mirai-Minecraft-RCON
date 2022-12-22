@@ -1,0 +1,22 @@
+# 本文件表示显式允许执行的指令。在本中间件中，采用msg.search(本文件列表项目)的方式匹配，支持正则表达式。
+# 权限组应当与user-group.yml文件中的分组一一对应。
+# 条目开头的~*两种符号需要用引号包裹。
+
+# 正规OP，默认给所有服务器可执行的指令权限
+op:
+    - .+ # 虽然您可以使用这种通配符，但服务器性能和安全起见，仍然建议您列出Minecraft原版的所有指令样式。
+
+# 建筑师，给fill相关指令
+architect:
+    - fill
+
+# 警探，给ledger相关指令，模组地址：https://github.com/QuiltServerTools/Ledger
+# 该指令需要一个玩家作为执行者，因此实际上并不能成功生效，此处用作测试用途。
+police:
+    - ledger i
+    - lg i
+
+# 人事官，给whitelist ban相关指令
+HR:
+    - whitelist add
+    - whitelist remove
