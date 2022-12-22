@@ -88,9 +88,6 @@ var MCServer = new RCON(
     CONFIG["rcon-verification"]
 );
 
-
-
-
 // 1.3 创建Mirai bot
 var bot = new Mirai({
     host: miraiHost,
