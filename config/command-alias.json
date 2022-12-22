@@ -1,8 +1,3 @@
-<<<<<<< HEAD
 {
     "lg i":"execute as ${playerName} run lg i"
-=======
-{
-    "lg i":"execute as ${playerName} run lg i"
->>>>>>> bd20191 (comments: added some TODOs)
 }
