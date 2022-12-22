@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
     "RCON-BOT_HELP": "【RCON BOT Help】\n !!RCON help - Display this help\n !!RCON myPerm - Check your permissions\n",
     "CURR_PERM_TEMPLATE": "You currently have permission to call: ",
@@ -11,3 +12,18 @@
     "MCSERVER_DISCONNECTING":"MC Rcon is disconnected",
     "MCSERVER_RES_SENDER_NOT_FOUND":"MC Rcon: Response target not found, and the response is:\n"
 }
+=======
+{
+    "RCON-BOT_HELP": "【RCON BOT Help】\n !!RCON help - Display this help\n !!RCON myPerm - Check your permissions\n",
+    "CURR_PERM_TEMPLATE": "You currently have permission to call: ",
+    "NOT_PERMITTED_COMMAND":"You are not permitted to call this command now!",
+    "COMMAND_SENT":"Command executed",
+    "MIRAI_AUTHED":"Mirai bot is authenticated with sessionKey of ${bot.sessionKey}",
+    "MIRAI_VERIFIED":"Mirai bot is verified with sessionKey of ${bot.sessionKey}",
+    "MIRAI_FRIEND_LIST":"Current account ${bot.qq} has ${friendList.length} friend(s)",
+    "MIRAI_DISCONNECTING":"Mirai bot disconnected",
+    "MCSERVER_AUTH":"MC Rcon is authenticated",
+    "MCSERVER_DISCONNECTING":"MC Rcon is disconnected",
+    "MCSERVER_RES_SENDER_NOT_FOUND":"MC Rcon: Response target not found, and the response is:\n"
+}
+>>>>>>> bd20191 (comments: added some TODOs)
