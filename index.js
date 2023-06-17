@@ -85,7 +85,7 @@ const miraiHost =
 var MCServer = new RCON(
     CONFIG["Minecraft-Server-Host"],
     CONFIG["rcon-port"],
-    CONFIG["rcon-verification"]
+    CONFIG["rcon-verification"] != null ? CONFIG["rcon-verification"] : ""
 );
 
 // 1.3 创建Mirai bot
@@ -133,7 +133,9 @@ MCServer.on("auth", function () {
     MCServerAuthed = true;
     // 刚认证成功时，清空所有队列中的未发送指令
     queuedCommands.forEach((item) => {
-        MCServer.send(item);
+        if (item) {
+            MCServer.send(item);
+        }
     });
     queuedCommands = [];
 
@@ -146,8 +148,8 @@ MCServer.on("auth", function () {
             // 对于过长的响应，RCON会分成多个response事件，因此这里的队列不能简单地用shift弹出。
             // !! 目前的这种按队列更新的格式可能不能支持竞态条件下多响应目标的数据分别传达
             // TODO 可能需要使用定时回收lastCommandSender 或者采用别的算法以调度分包的情形
-            if (queuedCommandSenders[0]){
-                lastCommandSender = queuedCommandSenders[0]
+            if (queuedCommandSenders[0]) {
+                lastCommandSender = queuedCommandSenders[0];
             }
             bot.sendMessage(str, lastCommandSender);
         } else {
