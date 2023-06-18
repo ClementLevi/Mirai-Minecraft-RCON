@@ -68,6 +68,7 @@ function MCCommandSend(MCServer, msg, sender) {
 
 // 1. 读取配置
 const CONFIG = read_config_Sync();
+console.log(`[Log] CONFIG: ${JSON.stringify(CONFIG)}`);
 // 1.1 读取Mirai安装位置和配置
 const MIRAI_CONFIG = read_config_Sync(
     path.join(
@@ -80,6 +81,8 @@ const miraiHost =
     MIRAI_CONFIG["adapterSettings"]["http"]["host"] +
     ":" +
     MIRAI_CONFIG["adapterSettings"]["http"]["port"];
+console.log(`[Log] MIRAI CONFIG: ${JSON.stringify(MIRAI_CONFIG)}`);
+console.log(`[Log] MIRAI HOST: ${miraiHost}`);
 
 // 1.2 创建MC服务器连接
 var MCServer = new RCON(
@@ -180,6 +183,7 @@ bot.onMessage(async (message) => {
     if (msg.indexOf("/") == 0) {
         // 判断是否有权限
         if (authorizationHandler.isPermitted(msg.slice(1), sender.id)) {
+            console.log(`[${new Date()}] ${sender.id}: ${msg}`);
             MCCommandSend(MCServer, msg, Friend(sender.id));
             // 返回回显消息，先不接入RCON那边吧
             reply(TEXTS["COMMAND_SENT"]);
